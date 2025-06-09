@@ -11,7 +11,7 @@ namespace P2
         public Produto Produto { get; private set; }
         public int Quantidade { get; private set; }
         public decimal PrecoUnitario { get; private set; }
-        public decimal PrecoToral => Quantidade * PrecoUnitario;
+        public decimal PrecoTotal => Quantidade * PrecoUnitario;
 
         public ItemPedido(Produto produto, int quantidade)
         {

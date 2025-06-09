@@ -8,7 +8,7 @@ namespace P2
 {
     public class ProdutoFactory
     {
-        private static int _idProximoProduto = 1; // Para IDs dos produtos
+        private static int _idProximoProduto = 1; // Para gerar IDs dos produtos
 
         public Produto CriarProduto(string nome, decimal preco, string categoria)
         {

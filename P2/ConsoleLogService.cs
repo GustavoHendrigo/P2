@@ -17,7 +17,7 @@ namespace P2
         public void LogError(string mensagem, Exception ex = null)
         {
             Console.ForegroundColor = ConsoleColor.Red; // Define a cor do texto para vermelho
-            Console.WriteLine($"[ERROR] {DateTime.Now:dd-MM-yyyy HH:mm:ss}: {mensagem}");
+            Console.WriteLine($"[ERRO] {DateTime.Now:dd-MM-yyyy HH:mm:ss}: {mensagem}");
             if (ex != null)
             {
                 Console.WriteLine($"  Tipo de Exceção: {ex.GetType().Name}");

@@ -34,6 +34,11 @@ namespace P2
             ValorTotal = _items.Sum(item => item.PrecoTotal);
         }
 
-        // O método AplicarDesconto será adicionado posteriormente, para aplicar o OCP.
+        // Método para aplicar uma estratégia de desconto
+        public void AplicarDesconto(IEstrategiaDeDesconto estrategiaDesconto)
+        {
+            if (estrategiaDesconto == null) throw new ArgumentNullException(nameof(estrategiaDesconto), "Estrategia de desconto não pode ser nula.");
+            ValorTotal = estrategiaDesconto.CalcularDesconto(this); // O total é atualizado com o valor calculado pela estratégia
+        }
     }
 }

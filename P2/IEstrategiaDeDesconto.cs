@@ -8,5 +8,6 @@ namespace P2
 {
     public interface IEstrategiaDeDesconto
     {
+        decimal CalcularDesconto(Pedido pedido);
     }
 }
